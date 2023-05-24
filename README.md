@@ -1,6 +1,8 @@
 ## INTRODUCTION
 
 ![Alt Text]('')
+
+
 This is a Data cleaning Task using sql. 
 The customer dataset was gotten online and was cleaned initially using power Query.
 
@@ -44,7 +46,6 @@ This shows I have successfully changed the column name to Dirty Part.
 ### Adding the previously removed column
 
 `insert into Dirty_5(Dirty_part)
-
 values('Name Hussein Hakeem Address Number 22 Fioye Crescent Surulere Lagos Age 17 Gender Male')`
 
 ![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(296).png')
@@ -57,3 +58,35 @@ values('Name Hussein Hakeem Address Number 22 Fioye Crescent Surulere Lagos Age 
 
 
 ![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(297).png')
+
+### Spliting into Fullname, Address, Age Gender and creation of a new table to contain the clean data (Dirty_cleaned)
+
+ `with partially_partially_cleaned_data as (select Dirty_part, SUBSTRING(Dirty_part, 6, 
+charindex('Address', Dirty_part)-7) as Full_Names,`
+
+ `SUBSTRING(Dirty_part, CHARINDEX('Address', Dirty_part)+8,
+  LEN(Dirty_part)- CHARINDEX('Address', Dirty_part)) AS Address_and_More,`
+   
+   `left(substring(SUBSTRING(Dirty_part, CHARINDEX('Age', Dirty_part),
+   LEN(Dirty_part) - charindex('Age', Dirty_part)),5,6),2)
+ as Age ,`
+
+ `SUBSTRING(Dirty_Part, CHARINDEX('Gender', Dirty_part)+6, 10) as Gender
+ from Dirty_5),`
+
+`Trimmed as (select Trim(Full_Names) as Full_Names, Trim(Left(Address_and_More, 
+CHARINDEX('Age', Address_and_More)-1)) as Addresses,
+ Trim(Age) as Age,Trim(Gender) as Gender from partially_partially_cleaned_data)`
+
+ `select * into Dirty_Cleaned from Trimmed`
+
+![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(298).png')
+
+### Viewing the new clean Table
+
+ `select * from Dirty_Cleaned`
+ 
+ ![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(342).png')
+
+
+
