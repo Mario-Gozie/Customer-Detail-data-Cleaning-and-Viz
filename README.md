@@ -22,7 +22,7 @@ The customer dataset was gotten online and was cleaned initially using power Que
 `select * from Dirty_5`
 
 
-![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(293).png')
+![Alt Text](https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(293).png)
 
 It is clear that the details are all in one column. it's also obvious that someone's detail is as the column name.
 hence, I need to rename the column to Dirty part but before I do so, I must copy down the individual's details.
@@ -33,13 +33,13 @@ hence, I need to rename the column to Dirty part but before I do so, I must copy
 
 'Dirty_part';`
 
-![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(294).png')
+![Alt Text](https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(294).png)
 
 ### viewing the table again
 
 `select * from Dirty_5`
 
-![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(295).png')
+![Alt Text](https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(295).png)
 
 This shows I have successfully changed the column name to Dirty Part.
 
@@ -48,7 +48,7 @@ This shows I have successfully changed the column name to Dirty Part.
 `insert into Dirty_5(Dirty_part)
 values('Name Hussein Hakeem Address Number 22 Fioye Crescent Surulere Lagos Age 17 Gender Male')`
 
-![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(296).png')
+![Alt Text](https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(296).png)
 
 
 
@@ -57,7 +57,7 @@ values('Name Hussein Hakeem Address Number 22 Fioye Crescent Surulere Lagos Age 
 `select * from Dirty_5;`
 
 
-![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(297).png')
+![Alt Text](https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(297).png)
 
 ### Spliting into Fullname, Address, Age Gender and creation of a new table to contain the clean data (Dirty_cleaned)
 
@@ -80,13 +80,13 @@ CHARINDEX('Age', Address_and_More)-1)) as Addresses,
 
  `select * into Dirty_Cleaned from Trimmed`
 
-![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(298).png')
+![Alt Text](https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(298).png)
 
 ### Viewing the new clean Table
 
  `select * from Dirty_Cleaned`
  
- ![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(342).png')
+ ![Alt Text](https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(342).png)
 
 
 
