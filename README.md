@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-![Alt Text]('')
+![Alt Text]('https://github.com/Mario-Gozie/SQL-Task/blob/main/Images/intro.png')
 
 
 This is a Data cleaning Task using sql. 
@@ -8,7 +8,7 @@ The customer dataset was gotten online and was cleaned initially using power Que
 
 ## POSSIBLE STAKEHOLDERS
 
-![Alt]('')
+![Alt]('https://github.com/Mario-Gozie/Chandoo-Sales-Data-Project/blob/main/Images/stakeholders.jpg')
 * Shop Owners
 * CEO's etc
 
