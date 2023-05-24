@@ -19,6 +19,7 @@ The customer dataset was gotten online and was cleaned initially using power Que
 
 `select * from Dirty_5`
 
+
 ![Alt Text]('https://github.com/Mario-Gozie/Customer-Detail-data-Cleaning-and-Viz/blob/main/Images/Screenshot%20(293).png')
 
 It is clear that the details are all in one column. it's also obvious that someone's detail is as the column name.
